@@ -1,0 +1,26 @@
+source ~/.git-prompt.sh
+export GIT_PS1_SHOWDIRTYSTATE=1
+export GIT_PS1_SHOWCOLORHINTS=1
+export GIT_PS1_SHOWUPSTREAM=auto
+if [ -f ~/.git-completion.bash ]; then
+  . ~/.git-completion.bash
+fi
+eval "$(hub alias -s)"
+
+alias cleangit="git checkout master && git pull --prune && git branch --merged | grep -v '^* master$' | grep -v '^. production$' | xargs git branch -d && git checkout master"
+alias cleangitprod="git checkout production && git pull && git branch --merged | grep -v '^* production$' | grep -v '^. master$' | xargs git branch -d"o
+
+alias ci-status="git ci-status -v | cut -f2 -d' ' | xargs open -a /Applications/Google\ Chrome.app"
+
+export CODEPATH=/Users/stanton/workspace/src/github.com/contentful
+alias code='cd $CODEPATH'
+
+function clone ()
+{
+  repo1=${1%.git}
+  repo2=${repo1#https://}
+  repo3=${repo2#git@}
+  repo=${repo3/:/\/}
+  mkdir -p $GOPATH/src/$repo
+  git clone $1 $GOPATH/src/$repo
+}

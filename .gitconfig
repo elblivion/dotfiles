@@ -1,0 +1,36 @@
+[filter "media"]
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
+[user]
+	name = Anthony Stanton
+	email = anthony@contentful.com
+	signingkey = 1A97E303
+[core]
+	excludesfile = ~/.gitignore_global
+[color]
+       diff = auto
+       status = auto
+       branch = auto
+[alias]
+       cpk = cherry-pick
+       st = status
+       sti = status --ignored
+       co = checkout
+       prettylog = log --pretty=oneline
+       nuke = reset --hard
+       nb = checkout -b
+       newbranch = checkout -b
+       np = push -u origin HEAD
+       pr = pull-request -b master -o
+       pp = pull --prune
+       ppr = pull-request -b production -o
+       asq = rebase -i --autosquash
+       autosquash = rebase -i --autosquash
+       backone = reset HEAD^
+       fp = push --force-with-lease -f
+       root = rev-parse --show-toplevel
+[push]
+	default = simple
+[commit]
+	gpgsign = true
