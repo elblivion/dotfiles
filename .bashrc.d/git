@@ -1,10 +1,6 @@
-source ~/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=1
 export GIT_PS1_SHOWCOLORHINTS=1
 export GIT_PS1_SHOWUPSTREAM=auto
-if [ -f ~/.git-completion.bash ]; then
-  . ~/.git-completion.bash
-fi
 eval "$(hub alias -s)"
 
 alias cleangit="git checkout master && git pull --prune && git branch --merged | grep -v '^* master$' | grep -v '^. production$' | xargs git branch -d && git checkout master"
