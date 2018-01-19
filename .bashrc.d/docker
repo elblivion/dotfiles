@@ -1,0 +1,4 @@
+alias removecontainers='docker rm `docker ps -a -q`'
+alias removeimages='docker rmi `docker images -q -f dangling=true`'
+alias cleandocker='removecontainers && removeimages'
+alias ecr-login="echo eval $\(aws ecr get-login --no-include-email\)"

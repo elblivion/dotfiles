@@ -1,0 +1,17 @@
+aws_env() {
+  if [ ! -z "$1" ]; then
+    export AWS_PROFILE=$1
+  fi
+}
+
+_aws_env() {
+    local cur prev envs
+    COMPREPLY=()
+    cur="${COMP_WORDS[COMP_CWORD]}"
+    prev="${COMP_WORDS[COMP_CWORD-1]}"
+    envs=$(cat ~/.aws/credentials | grep ^\\[  | sed 's/\[//;s/\]//')
+    COMPREPLY=( $(compgen -W "${envs}" -- ${cur}) )
+}
+complete -F _aws_env aws_env
+
+#complete -C aws_completer aws

@@ -1,0 +1,9 @@
+# move to .envrc?
+export CF_FOODCRITIC_RULES=FC006,FC009,FC022,FC026,FC027,FC032,FC033,FC034,FC037,FC038,FC039,FC040
+
+function cheflog { aws s3 cp $1 - | less -R; }
+function elblog { aws s3 cp $1 - | less -S; }
+function cheflastlog { aws s3 cp s3://f123ad45-papertrail/cheflogs/chef.$1.last.log - | less -R; }
+function cheflasterr { aws s3 cp s3://f123ad45-papertrail/cheflogs/chef.$1.lasterr.log - | less -R; }
+function cheflastlogdev { aws s3 cp s3://cf-preview-logs/cheflogs/chef.$1.last.log - | less -R; }
+function cheflasterrdev { aws s3 cp s3://cf-preview-logs/cheflogs/chef.$1.lasterr.log - | less -R; }
