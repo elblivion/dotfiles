@@ -8,7 +8,7 @@ alias cleangitprod="git checkout production && git pull && git branch --merged |
 
 alias ci-status="git ci-status -v | cut -f2 -d' ' | xargs open -a /Applications/Google\ Chrome.app"
 
-export CODEPATH=/Users/stanton/workspace/src/github.com/contentful
+export CODEPATH=~/workspace/src/github.com/contentful
 alias code='cd $CODEPATH'
 
 function clone ()
