@@ -1,4 +1,0 @@
-#export PROMPT_COMMAND='pwd2=$(sed "s:\([^/]\)[^/]*/:\1/:g" <<<$PWD); __git_ps1 "👻::$pwd2" " (\[\e[33m\]${AWS_PROFILE}\[\e[0m\]) (\[\e[35m\]$(kubectl config current-context)\[\e[0m\])\\\$ "'
-# works but ugly
-export PROMPT_COMMAND='__git_ps1 "\[\e[33m\]${USER}@${HOSTNAME}: ${PWD}\[\e[0m\]" " (\[\e[33m\]${AWS_PROFILE}\[\e[0m\]) \\\$ "'
-export PROMPT_COMMAND='pwd2=$(sed "s:\([^/]\)[^/]*/:\1/:g" <<<$PWD);__git_ps1 "\[\e[1;32m\]${USER}@${HOSTNAME}\[\e[0m\]: \[\e[1;34m\]${pwd2}\[\e[0m\]" " (\[\e[1;33m\]${AWS_PROFILE}\[\e[0m\]) \\\$ "'
