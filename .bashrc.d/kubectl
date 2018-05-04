@@ -1,1 +1,28 @@
 source <(kubectl completion bash)
+
+k8s-secret () {
+   if [ -z "$1" ]
+   then
+     echo "You need to provide a secret"
+     return 1
+   fi
+
+   echo -n "$1" | base64 -w0 | tr -d '\n' | pbcopy
+
+   echo "Secret added to clipboard :-)"
+
+   return 0
+}
+
+k8s-secret-read () {
+  if [ -z "$1" ]
+  then
+    echo "You need to provide a secret"
+    return 1
+  fi
+
+  echo "$1" | base64 -D
+  echo
+
+  return 0
+}
