@@ -1,3 +1,2 @@
 alias pbcopy='xclip -sel clip'
 alias pbpaste='xclip -o'
-alias did='vim +'normal Go' +'r!date' ~/Dropbox\ \(Contentful\)/did.txt'
