@@ -15,3 +15,5 @@ _aws_env() {
 complete -F _aws_env aws_env
 
 #complete -C aws_completer aws
+
+export PATH=/home/stanton/workspace/src/github.com/contentful/cf-aws-login/bin:$PATH
