@@ -9,9 +9,10 @@
 [core]
 	excludesfile = ~/.gitignore_global
 [color]
-       diff = auto
-       status = auto
-       branch = auto
+  diff = auto
+  status = auto
+  branch = auto
+  colorMoved = default
 [alias]
        cpk = cherry-pick
        st = status
