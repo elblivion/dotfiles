@@ -23,7 +23,7 @@
        nb = checkout -b
        newbranch = checkout -b
        np = push -u origin HEAD
-       npr = pull-request -b master -o
+       npr = pull-request -b master -o -d
        pp = pull --prune
        ppr = pull-request -b production -o
        asq = rebase -i --autosquash
