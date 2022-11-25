@@ -1,3 +1,4 @@
 alias pbcopy='xclip -sel clip'
 alias pbpaste='xclip -o'
+alias fuck='sudo $(fc -ln -1)'
 export EDITOR=vim
