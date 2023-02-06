@@ -5,7 +5,7 @@
 [user]
 	name = Anthony Stanton
 	email = anthony@contentful.com
-	signingkey = 1A97E303
+	signingkey = D375CCF2408E2A7A
 [core]
 	excludesfile = ~/.gitignore_global
 [color]
@@ -34,6 +34,7 @@
 [push]
 	default = simple
 [commit]
+	gpgsign = true
   #gpgsign = true
 [pull]
 	rebase = false
