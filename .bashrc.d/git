@@ -10,6 +10,7 @@ alias ci-status="git ci-status -v | cut -f2 -d' ' | xargs open -a /Applications/
 
 export CODEPATH=~/workspace/src/github.com/contentful
 alias code='cd $CODEPATH'
+alias vscode=/snap/bin/code
 
 function clone ()
 {
